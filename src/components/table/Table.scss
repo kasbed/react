@@ -1,0 +1,39 @@
+
+.table-container {
+    max-height: 650px;
+    overflow-y: scroll;
+}
+
+.order-header {
+    background-color: #dddddd;
+    cursor: pointer;
+    padding: 2px;
+}
+.order-header:hover {
+    cursor: pointer;
+    background-color: #577bc9;
+}
+
+.order-header.active {    
+    background-color: #d55555;
+}
+
+.group-row {
+    background-color: #dab7b7;
+    border-bottom: 1px solid black;
+}
+
+.row {
+    padding: 1px;
+}
+.alter {
+    background-color: #90aeee;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.center-text {
+    text-align: center;
+}
