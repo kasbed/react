@@ -13,6 +13,7 @@ import './Table.scss';
 const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
 
     const totalHeaders = headers[0].flatMap(r => r.val).length;
+    const dataMemo = React.useMemo(() => data, []);
 
     /**
      * Convert input to date Text 
@@ -62,7 +63,7 @@ const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
     }
 
     const generateGroupedBody = () => {
-        let dataGrouped = data.reduce((objectKeyValue, obj) => {
+        let dataGrouped = dataMemo.reduce((objectKeyValue, obj) => {
             const val = obj[grouped];
             objectKeyValue[val] = (objectKeyValue[val] || []).concat(obj);
             return objectKeyValue;
@@ -81,7 +82,7 @@ const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
     }
 
     const generateFlatBody = () => {
-        let dataSorted = sortData(data);
+        let dataSorted = sortData(dataMemo);
         return dataSorted.map((el, indx) => generateRow(el, indx));
     }
 
