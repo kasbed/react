@@ -1,6 +1,6 @@
 
 .table-container {
-    max-height: 650px;
+    max-height: 80vh;
     overflow-y: scroll;
 }
 
@@ -15,19 +15,18 @@
 }
 
 .order-header.active {    
-    background-color: #d55555;
+    background-color: #6b6161;
 }
 
 .group-row {
-    background-color: #dab7b7;
-    border-bottom: 1px solid black;
+    background-color: #a6c8ec;
+    font-weight: bold;
+    font-style: italic;
+    color:#2c7fe6
 }
 
-.row {
-    padding: 1px;
-}
 .alter {
-    background-color: #90aeee;
+    background-color: #dddddd;
 }
 
 .left-text {

@@ -40,16 +40,17 @@ const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
     }
 
     const generateHeaders = () => {
-        return headers[lang].map(el => {
+        return headers[lang].map((el, idx) => {
             let orderDir = '';
             let classes = 'order-header';
             if(orderField === el.value) {
                 orderDir = orderType ? 'asc' : 'desc';
                 classes += ' active';
             }
-            return (<th className={classes} onClick={handleClick} propname={el.value} order={orderDir}>
-                {el.desc} {orderType === 'desc' ? <BsFillCaretDownFill size='.8em' /> : <BsFillCaretUpFill size='.8em' />}
-            </th>);
+            return (
+                <th key={idx} className={classes} onClick={handleClick} propname={el.value} order={orderDir}>
+                    {el.desc} {orderType === 'desc' ? <BsFillCaretDownFill size='.8em' /> : <BsFillCaretUpFill size='.8em' />}
+                </th>);
         });
     }
     
@@ -70,7 +71,7 @@ const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
             let childRows = sortData(dataGrouped[group]).map((el, indx) => generateRow(el, indx));
             return (
                 <>
-                    <tr>
+                    <tr key={group}>
                         <th colSpan={totalHeaders} className='group-row left-text'>{group}</th>
                     </tr>
                     {childRows}
@@ -88,9 +89,9 @@ const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
         let dateStr = convertDate(row.calldate);
         let hourStr = convertTime(row.calldate);
         let text = row.note.length > 25 ? row.note.substring(0, 25) + '...' : row.note;
-        let rowClasses = (index + 1) % 2 == 0 ? 'row alter' : 'row'
+        let rowClasses = (index + 1) % 2 == 0 ? 'alter' : ''
         return (
-            <tr key={row.uuid} className={rowClasses}>
+            <tr key={row.uid} className={rowClasses}>
                 <td>{row.service}</td>
                 <td>{row.destination}</td>
                 <td className='center-text'>{row.source}</td>
@@ -101,7 +102,7 @@ const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
                 <td title={row.note}>{text}</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td className='center-text'>{row.hasrecord ? <BsCheckCircle color='green' size='.8em' /> : ''}</td>
+                <td className='center-text'>{row.hasrecord ? <BsCheckCircle color='green' size='.9em' /> : ''}</td>
             </tr>
         );
     }
@@ -114,9 +115,9 @@ const Table = ({lang, orderField, orderType, grouped, onHeaderClicked}) => {
     }
 
     return ( 
-        <div className='table-container' >
-            <table className='ui-table'>
-                <thead><tr>{generateHeaders()}</tr></thead>
+        <div className='table-container table-responsive' >
+            <table className='ui-table table table-stripped'>
+                <thead><tr key='header-app'>{generateHeaders()}</tr></thead>
                 <tbody>{generateBody()}</tbody>
             </table>
         </div>

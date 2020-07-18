@@ -1,6 +1,8 @@
 import React from "react";
 import { language } from "../../data/language";
 
+
+
 const LangaugeSelect = ({onSelectChange, langSelected}) => {
     const options = language[langSelected];
     const printOptions = () => {
@@ -13,8 +15,8 @@ const LangaugeSelect = ({onSelectChange, langSelected}) => {
 
     return (
         <div>
-        Idioma: 
-        <select onChange={onChangeHandler} >
+        <label>Idioma:</label> 
+        <select onChange={onChangeHandler} className='form-control' >
             {printOptions()}
         </select>
         </div>

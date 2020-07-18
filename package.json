@@ -9,11 +9,13 @@
     "build": "parcel build public/index.html"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "data": "^0.6.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-icons": "^3.10.0",
+    "react-table": "^7.3.0",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {

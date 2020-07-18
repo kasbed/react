@@ -8,7 +8,7 @@ const Grouper = ({onSelectChange}) => {
 
     return (<div>
         Agrupar: 
-        <select onChange={handleChange}> 
+        <select onChange={handleChange} className='form-control'> 
             <option key="1" value="">-</option>
             <option key="2" value='id'>Id</option>
             <option key="3" value='uid'>Uid</option>
