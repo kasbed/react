@@ -2,93 +2,115 @@ export const headers = [
     [
         {
             "value" :   "service",
-            "desc"  :   "Servicio"
+            "desc"  :   "Servicio",
+            "idx" : 0
         },
         {
             "value" :   "destination",
-            "desc"  :   "Destino/Agente"
+            "desc"  :   "Destino/Agente",
+            "idx" : 1
         },
         {
             "value" :   "source",
-            "desc"  :   "Número de Contacto"
+            "desc"  :   "Número de Contacto",
+            "idx" : 2
         },
         {
             "value" :   "calldate",
-            "desc"  :   "Fecha"
+            "desc"  :   "Fecha",
+            "idx" : 3
         },
         {
             "value" :   "calldate",
-            "desc"  :   "Hora"
+            "desc"  :   "Hora",
+            "idx" : 4
         },
         {
             "value" :   "duration",
-            "desc"  :   "Duración (Min.)"
+            "desc"  :   "Duración (Min.)",
+            "idx" : 5
         },
         {
             "value" :   "disposition",
-            "desc"  :   "Estado"
+            "desc"  :   "Estado",
+            "idx" : 6
         },
         {
             "value" :   "note",
-            "desc"  :   "Texto"
+            "desc"  :   "Texto",
+            "idx" : 7
         },
         {
             "value" :   "",
-            "desc"  :   "Tipificación"
+            "desc"  :   "Tipificación",
+            "idx" : 8
         },
         {
             "value" :   "",
-            "desc"  :   "Encuesta"
+            "desc"  :   "Encuesta",
+            "idx" : 9
         },
         {
             "value" :   "hasrecord",
-            "desc"  :   "Grabación"
+            "desc"  :   "Grabación",
+            "idx" : 10
         }
     ],
     [
         {
             "value" :   "service",
-            "desc"  :   "Servicie"
+            "desc"  :   "Servicie",
+            "idx" : 0
         },
         {
             "value" :   "destination",
-            "desc"  :   "Destination/Agent"
+            "desc"  :   "Destination/Agent",
+            "idx" : 1
         },
         {
             "value" :   "source",
-            "desc"  :   "Contact Number"
+            "desc"  :   "Contact Number",
+            "idx" : 2
         },
         {
             "value" :   "calldate",
-            "desc"  :   "Date"
+            "desc"  :   "Date",
+            "idx" : 3
         },
         {
             "value" :   "calldate",
-            "desc"  :   "Hour"
+            "desc"  :   "Hour",
+            "idx" : 4
         },
         {
             "value" :   "duration",
-            "desc"  :   "Duration (Min.)"
+            "desc"  :   "Duration (Min.)",
+            "idx" : 5
         },
         {
             "value" :   "disposition",
-            "desc"  :   "Status"
+            "desc"  :   "Status",
+            "idx" : 6
         },
         {
             "value" :   "note",
-            "desc"  :   "Text"
+            "desc"  :   "Text",
+            "idx" : 7
         },
         {
             "value" :   "",
-            "desc"  :   "Tipification"
+            "desc"  :   "Tipification",
+            "idx" : 8
         },
         {
             "value" :   "",
-            "desc"  :   "Survey"
+            "desc"  :   "Survey",
+            "idx" : 9
         },
         {
             "value" :   "hasrecord",
-            "desc"  :   "Record"
+            "desc"  :   "Record",
+            "idx" : 10
         }
     ]
 ];

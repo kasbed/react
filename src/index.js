@@ -14,7 +14,7 @@ const App = () => {
 
     const[language, setLanguage] = useState(defaultLang);
     const[group, setGroup] = useState('');
-    const[orderField, setOrderField] = useState('id');
+    const[orderField, setOrderField] = useState();
     const[orderType, setOrderType] = useState('desc');
 
     const onChangeSelect = (lang) => {
@@ -30,7 +30,7 @@ const App = () => {
         setOrderType(type ? type : defaulOrder);
     }
 
-    return (
+    return (        
         <div className='container-fluid'>
             <div className='form-group'>
                 <LanguageSelect onSelectChange={onChangeSelect} langSelected={language} />

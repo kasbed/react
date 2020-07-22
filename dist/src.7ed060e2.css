@@ -70,4 +70,9 @@ body {
   width: 100%;
 }
 
+.loading {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /*# sourceMappingURL=/src.7ed060e2.css.map */
